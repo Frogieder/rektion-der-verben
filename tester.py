@@ -50,8 +50,9 @@ class Tester:
             while True:
                 print(words[0] + " ... " + artikel[0])
                 antwort = input("=> ").strip()
-                if not len(antwort.split()) == 2:
-                    print("Schreib 2 Wörter (Präposition + Artikel)")
+                if not len(antwort.split()) == (2 if self.has_articles else 1):
+                    print("Schreib 2 Wörter (Präposition + Artikel)" if self.has_articles else 
+                          "Scherib die Präposition")
                     continue
                 break
 
