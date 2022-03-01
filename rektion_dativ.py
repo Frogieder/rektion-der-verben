@@ -1,8 +1,5 @@
 from random import shuffle, choice
 
-"""
-Can only at this point in time - but who cares?
-"""
 
 pronouns = [
     ["ich", "mir"], 
@@ -32,7 +29,7 @@ artikeln = [
 
 new_session = input("Möchtest du neue Sitzung anfangen? [j/N]: ")
 
-filename = "data.txt" if new_session in ["j", "ja", "yes", "y"] else "to_learn.txt"
+filename = "data_dativ.txt" if new_session in ["j", "ja", "yes", "y"] else "to_learn.txt"
 
 
 with open(filename, "r") as file:
